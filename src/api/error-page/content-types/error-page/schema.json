@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "error_pages",
+  "info": {
+    "singularName": "error-page",
+    "pluralName": "error-pages",
+    "displayName": "Error Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "splash": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
