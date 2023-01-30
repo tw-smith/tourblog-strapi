@@ -27,7 +27,7 @@ module.exports = {
                     fields: ["id", "title", "subtitle", "content", "publishedAt"],
                     populate: {
                         photos: {
-                            fields: ['formats']
+                             fields: ['url', 'formats']
                         },
                     },
                 });
