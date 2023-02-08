@@ -9,17 +9,17 @@ module.exports = {
     console.log(ctx.params.tag)
     let data
     try {
-      if (ctx.params.tag) {
-        console.log("in tag branch")
+      if (ctx.params.tag === 'all') {
+        console.log('in all post branch')
         data = await strapi
         .service("api::posts-index.posts-index")
-        .searchTag(ctx.params.tag);
+        .returnAll();
       } else {
+        console.log("in tag search branch")
         data = await strapi
         .service("api::posts-index.posts-index")
-        .returnAll(ctx.params.tag);
+        .searchTag(ctx.params.tag)
       }
-
       ctx.body = data;
     } catch (err) {
       ctx.badRequest("Post index controller error", {moreDetails: err})
