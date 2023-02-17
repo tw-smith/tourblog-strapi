@@ -24,7 +24,7 @@ module.exports = {
                     filters: {
                         slug: slug,
                     },
-                    fields: ["id", "title", "subtitle", "content", "publishedAt"],
+                    fields: ["id", "title", "subtitle", "content", "publishedAt", "displayDate"],
                     populate: {
                         photos: {
                              fields: ['url', 'formats', 'caption']
@@ -47,6 +47,7 @@ module.exports = {
                         subtitle: item.subtitle || "",
                         content: item.content || "",
                         publishedAt: item.publishedAt || "",
+                        displayDate: item.displayDate || "",
                         photos: item.photos,
                         //photos: item.photos.formats.small.url,
                     });

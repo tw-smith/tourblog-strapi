@@ -51,7 +51,7 @@ module.exports = {
         try {
                 const posts = await strapi.entityService.findMany(
                     "api::post.post", {
-                        fields: ["id", "title", "publishedAt", "slug", "tag"],
+                        fields: ["id", "title", "publishedAt", "slug", "tag", "displayDate"],
                         populate: {
                             coverPhoto: {
                                 fields: ["formats"],
@@ -71,6 +71,7 @@ module.exports = {
                         publishedAt: item.publishedAt || "",
                         slug: item.slug || "",
                         tag: item.tag || "",
+                        displayDate: item.displayDate || "",
                         coverPhoto: item.coverPhoto.formats.small.url || "",
                     });
                     return acc;
