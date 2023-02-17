@@ -49,6 +49,10 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "displayDate": {
+      "type": "date",
+      "required": true
     }
   }
 }
