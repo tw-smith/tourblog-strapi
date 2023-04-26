@@ -9,5 +9,17 @@ module.exports = ({ env }) => ({
                 small: 500
             }
         }
+    },
+    email: {
+        config: {
+            provider: 'sendgrid',
+            providerOptions: {
+                apiKey: env('SENDGRID_API_KEY'),
+            },
+            settings: {
+                defaultFrom: 'strapi@mail.tw-smith.me',
+            }
+        }
     }
+
 })
